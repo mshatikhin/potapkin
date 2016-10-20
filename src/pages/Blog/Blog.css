@@ -1,0 +1,101 @@
+.main {
+    display: block;
+    width: 960px;
+    max-width: 100%;
+    background: transparent;
+    margin: auto auto 60px;
+    box-shadow: rgba(0, 0, 0, .117647) 0 1px 6px, rgba(0, 0, 0, .117647) 0 1px 4px;
+}
+
+.main img, .main iframe {
+    max-width: 100% !important;
+}
+
+.posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.postHeader {
+    font-size: 22px;
+    color: #111;
+}
+
+.postsLink {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.postsLink:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+}
+
+.posts_link:hover {
+    cursor: pointer;
+}
+
+.link {
+    display: block;
+    color: #444;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.card {
+    padding: 40px 30px 50px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+}
+
+.cardImage {
+    float: left;
+    margin-right: 30px;
+    margin-top: 9px;
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+}
+
+.cardImage:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.postWrap {
+    margin-left: 330px;
+}
+
+.img {
+    width: 100%;
+    max-height: inherit;
+    filter: grayscale(100%);
+    transition: .2s all ease-out;
+}
+
+.card:hover .img{
+    filter: grayscale(0%);
+}
+
+.links {
+    color: #0d88ff;
+}
+
+@media screen and (max-width: 1000px) {
+  .cardImage{
+      float: none;
+      display: block;
+  }
+  
+  .postWrap{
+      margin-left: 0;
+  }
+}

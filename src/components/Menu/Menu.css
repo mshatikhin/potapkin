@@ -1,0 +1,45 @@
+.wrap {
+    display: block;
+    width: 100%;
+    margin: 35px auto 15px auto;
+}
+
+.link {
+    font-size: 14px;
+    color: #777;
+    margin-right: 20px;
+    transition: .2s color ease-out;
+}
+
+.link:last-child {
+    margin-right: 0;
+}
+
+.activeLink {
+    color: #000;
+    box-shadow: 0 1px 0 red;
+}
+
+@media screen and (max-width: 950px) {
+    .wrap {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrap {
+        text-align: center;
+    }
+    .link {
+        display: block;
+        width: 100%;
+        background: #eee;
+        font-size: 20px;
+        padding: 4px;
+        font-weight: 300;
+        margin-bottom: 1px;
+    }
+    .link:hover {
+        color: #000;
+    }
+}

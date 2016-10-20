@@ -1,0 +1,57 @@
+.header {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 40px 0 40px 0;
+    width: 100%;
+}
+
+.headerWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    width: 960px;
+}
+
+.menu {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.title {
+    color: #999;
+    display: block;
+    font-weight: 300;
+}
+
+.logoLink {
+}
+
+.logo {
+    border: none;
+    display: inline-block;
+    outline: none;
+}
+
+@media screen and (max-width: 950px) {
+    .headerWrapper {
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .logoLink {
+        position: initial;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .title {
+        margin: 10px 0 25px 0;
+    }
+    .menu {
+        position: static;
+    }
+}

@@ -1,0 +1,24 @@
+[include]
+
+[ignore]
+.*/node_modules/babel-.*
+.*/node_modules/react/.*
+.*/node_modules/fbjs/lib/.*
+.*/node_modules/fbjs/flow/.*
+.*/node_modules/jest-cli/.*
+
+[libs]
+interfaces/
+
+[options]
+module.name_mapper='.*\(.css\)' -> 'CSSModule'
+module.name_mapper='.*\(.png\)' -> 'CSSModule'
+module.system=haste
+strip_root=true
+
+module.file_ext=.js
+module.file_ext=.css
+module.file_ext=.png
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
