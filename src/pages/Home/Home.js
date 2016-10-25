@@ -3,61 +3,40 @@
 import styles from "./Home.css";
 import {Component} from "react";
 import Slider from "react-slick";
+import {connect} from "react-redux";
+import {slideShowId, FLICKR_API_KEY, FLICKR_USER_ID} from "../../utils/util";
+import {photosRequest, resetPhotos} from "../../redux/actions/photosActions";
 
-const images = [
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800",
-    "http://placeboobs.com/1600/800)"
-];
+class Home extends Component {
 
-const bestImages = [ 0, 1, 7, 9, 14, 15, 16, 18 ];
+    constructor(props) {
+        super(props);
+    }
 
-function getRandomArbitary(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    componentDidMount() {
+        this.props.dispatch(photosRequest(FLICKR_USER_ID, FLICKR_API_KEY, slideShowId))
+    }
 
-export default class Home extends Component {
-
-    constructor() {
-        super();
+    componentWillUnmount(){
+        this.props.dispatch(resetPhotos());
     }
 
     render() {
-        const initSlide = bestImages[getRandomArbitary(1, bestImages.length)];
         const settings = {
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 3000,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: initSlide
+            slidesToScroll: 1
         };
 
         return (
             <div className={styles.root}>
                 <div className={styles.wrapper}>
                     <Slider {...settings}>
-                        {images.map(( img, index ) => <div key={index} className={styles.imgWrap}>
-                            <img src={img} className={styles.img} onLoad={this.onLoad}/>
+                        {this.props.images.map((img, index) => <div key={index} className={styles.imgWrap}>
+                            <img src={img} className={styles.img}/>
                         </div>)}
                     </Slider>
                 </div>
@@ -65,3 +44,12 @@ export default class Home extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    let {photos} = state.photosInfo;
+    return {
+        images: photos || []
+    }
+};
+
+export default connect(mapStateToProps)(Home);

@@ -1,0 +1,48 @@
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    background-size: cover;
+    background: #fff url("./images/footer.png") no-repeat 50% 50%;
+    width: 1080px;
+    height: 242px;
+}
+
+.soc {
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+}
+
+.vk {
+    cursor: pointer;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background: transparent url("./images/vk.svg") no-repeat 50% 50%;
+    margin-right: 15px;
+}
+
+.facebook {
+    cursor: pointer;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background: transparent url("./images/facebook.svg") no-repeat 50% 50%;
+    margin-right: 15px;
+}
+
+.instagram {
+    cursor: pointer;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background: transparent url("./images/instagram.svg") no-repeat 50% 50%;
+}

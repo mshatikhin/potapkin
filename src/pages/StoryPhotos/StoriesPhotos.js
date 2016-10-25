@@ -4,7 +4,7 @@ import styles from "./StoriesPhotos.css";
 import {connect} from "react-redux";
 import {withRouter} from "react-router";
 import Loader from "../../components/Loader";
-import {photosRequest, updatePhotos} from "../../redux/actions/photosActions";
+import {photosRequest, updatePhotos, resetPhotos} from "../../redux/actions/photosActions";
 import {FLICKR_USER_ID, FLICKR_API_KEY} from "../../utils/util";
 
 const propTypes = {
@@ -24,7 +24,7 @@ class HistoryPhotosContainer extends Component {
     }
 
     componentWillUnmount() {
-        this.props.dispatch(updatePhotos([]));
+        this.props.dispatch(resetPhotos());
     }
 
     render() {

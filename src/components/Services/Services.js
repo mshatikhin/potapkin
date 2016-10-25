@@ -62,9 +62,9 @@ class Services extends Component {
                     <thead>
                     <tr>
                         <th>Бонус</th>
-                        <th><span className={styles.green} title="Включено в пакет"></span></th>
-                        <th><span className={styles.green} title="Включено в пакет"></span></th>
-                        <th><span className={styles.green} title="Включено в пакет"></span></th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
                     </tr>
                     </thead>
                     <tbody>

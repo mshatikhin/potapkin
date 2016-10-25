@@ -3,7 +3,11 @@
 export const UPDATE_PHOTOS = 'UPDATE_PHOTOS';
 
 export function updatePhotos(photosInfo: any) {
-    return { type: UPDATE_PHOTOS, photosInfo };
+    return {type: UPDATE_PHOTOS, photosInfo};
+}
+
+export function resetPhotos() {
+    return {type: UPDATE_PHOTOS, photosInfo: null};
 }
 
 export function photosRequest(userId: string, apiKey: string, photosetId: string) {
@@ -23,6 +27,6 @@ export function photosRequest(userId: string, apiKey: string, photosetId: string
                     return dispatch(updatePhotos(photosInfo));
                 }
             })
-            .catch(({ errors }) => dispatch(updatePhotos([])));
+            .catch(({errors}) => dispatch(updatePhotos([])));
     };
 }

@@ -3,9 +3,9 @@
 import React, {PropTypes, Component} from "react";
 import styles from "./Photos.css";
 import {connect} from "react-redux";
-import {Link, withRouter} from "react-router";
+import {withRouter} from "react-router";
 import Loader from "../../components/Loader";
-import {photosRequest, updatePhotos} from "../../redux/actions/photosActions";
+import {photosRequest, resetPhotos} from "../../redux/actions/photosActions";
 import {FLICKR_USER_ID, FLICKR_API_KEY} from "../../utils/util";
 
 const propTypes = {
@@ -24,7 +24,7 @@ class PhotosContainer extends Component {
     }
 
     componentWillUnmount() {
-        this.props.dispatch(updatePhotos([]));
+        this.props.dispatch(resetPhotos());
     }
 
     render() {

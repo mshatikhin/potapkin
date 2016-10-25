@@ -14,7 +14,9 @@ const initialState = {
 export default function (state: IState = initialState, action: any) {
     switch (action.type) {
         case UPDATE_PHOTOS:
-            return Object.assign({}, state, action.photosInfo);
+            state.photos = action.photosInfo == null ? [] : action.photosInfo.photos;
+            state.title = action.photosInfo == null ? "" : action.photosInfo.title;
+            return Object.assign({}, state);
         default:
             return state;
     }

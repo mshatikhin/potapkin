@@ -1,6 +1,7 @@
 .cssload_container {
     width: 81px;
-    margin: 250px auto;
+    margin: auto;
+    padding-top: 250px;
 }
 
 .cssload_circle {

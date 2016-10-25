@@ -10,5 +10,5 @@ export default combineReducers({
     post: postReducer,
     portfolio: albumsReducer,
     photosInfo: photosReducer,
-    stories: historiesReducer
+    stories: historiesReducer,
 });

@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 import {browserHistory, withRouter} from "react-router";
 import Loader from "../../components/Loader";
 import {storyRequest} from "../../redux/actions/storiesActions";
-import {FLICKR_USER_ID, FLICKR_API_KEY, portfolioIds} from "../../utils/util";
+import {FLICKR_USER_ID, FLICKR_API_KEY, portfolioIds, slideShowId} from "../../utils/util";
 
 const propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -26,7 +26,8 @@ class StoriesContainer extends Component {
         return (
             <div className={styles.main}>
                 {this.props.stories.length == 0 ? <Loader /> : this.props.stories
-                    //.filter(s => !portfolioIds.some(i => i == s.id))
+                    .filter(s => !portfolioIds.some(i => i == s.id))
+                    .filter(s => slideShowId != s.id)
                     .map((album) => {
                         const additionalClass = (album.primary_photo_extras.width_z - album.primary_photo_extras.height_z) > 0 ? styles.horizontalImage : styles.verticalImage;
                         return <div

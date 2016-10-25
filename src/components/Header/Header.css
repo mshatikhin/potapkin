@@ -41,12 +41,17 @@
 }
 
 @media screen and (max-width: 950px) {
+    .header {
+        position: static;
+    }
+
     .headerWrapper {
         padding-bottom: 0;
         text-align: center;
     }
 
     .logoLink {
+        float: none;
         position: initial;
     }
 
