@@ -1,0 +1,68 @@
+.root {
+    display: block;
+    width: 960px;
+    max-width: 100%;
+    margin: 150px auto 100px auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+.table th:nth-child(2),
+.table th:nth-child(3),
+.table th:nth-child(4),
+.table td:nth-child(2),
+.table td:nth-child(3),
+.table td:nth-child(4) {
+    width: 120px;
+    text-align: center;
+    padding: 0 10px;
+    font-weight: 100;
+    font-size: 14px;
+    color: #303030;
+}
+
+.table th {
+    font-family: Comfortaa, serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #303030;
+    padding: 30px 10px;
+}
+
+.table td:first-child {
+    text-align: left;
+}
+
+.table td {
+    font-size: 13px;
+    color: #606060;
+    padding: 10px;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background: #efefef;
+}
+
+.grey {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: url("./images/grey.png") no-repeat 50% 50%;
+}
+
+.green {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: url("./images/green.png") no-repeat 50% 50%;
+}

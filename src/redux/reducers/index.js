@@ -3,10 +3,12 @@ import blogReducer from './blogReducer';
 import postReducer from './postReducer';
 import albumsReducer from './albumsReducer';
 import photosReducer from './photosReducer';
+import historiesReducer from "./storiesReducer";
 
 export default combineReducers({
     blog: blogReducer,
     post: postReducer,
     portfolio: albumsReducer,
-    photos: photosReducer,
+    photosInfo: photosReducer,
+    stories: historiesReducer
 });

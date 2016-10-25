@@ -1,11 +1,9 @@
 // @flow
 
-import "whatwg-fetch";
-
 export const UPDATE_PHOTOS = 'UPDATE_PHOTOS';
 
-export function updatePhotos(photos: any[]) {
-    return { type: UPDATE_PHOTOS, photos };
+export function updatePhotos(photosInfo: any) {
+    return { type: UPDATE_PHOTOS, photosInfo };
 }
 
 export function photosRequest(userId: string, apiKey: string, photosetId: string) {
@@ -17,7 +15,12 @@ export function photosRequest(userId: string, apiKey: string, photosetId: string
                     const photos = response.photoset.photo.map(function (photo) {
                         return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg`
                     });
-                    return dispatch(updatePhotos(photos));
+                    const title = response.photoset.title;
+                    const photosInfo = {
+                        title,
+                        photos
+                    };
+                    return dispatch(updatePhotos(photosInfo));
                 }
             })
             .catch(({ errors }) => dispatch(updatePhotos([])));

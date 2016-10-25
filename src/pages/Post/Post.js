@@ -32,19 +32,9 @@ class PostContainer extends Component {
         const post = this.props.post;
         return (
             post.content == null ? <Loader /> : <div className={styles.main}>
-                <div className={styles.backWrap}>
-                    <Link to="/blog" className={styles.back}>
-                        BACK TO BLOG
-                    </Link>
-                </div>
                 <div className={styles.card}>
                     <h1>{post && post.title}</h1>
                     <div dangerouslySetInnerHTML={this.createMarkup(post && post.content) }></div>
-                </div>
-                <div className={styles.backWrap}>
-                    <Link to="/blog" className={styles.back}>
-                        BACK TO BLOG
-                    </Link>
                 </div>
             </div>
         );

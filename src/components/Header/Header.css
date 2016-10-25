@@ -1,8 +1,12 @@
 .header {
+    position: fixed;
+    background: #fff;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
     display: block;
     height: auto;
     max-width: 100%;
-    padding: 40px 0 40px 0;
     width: 100%;
 }
 
@@ -11,12 +15,13 @@
     max-width: 100%;
     text-align: center;
     width: 960px;
+    overflow: hidden;
+    box-shadow: 0 2px 1px -2px #a5a5a5;
 }
 
 .menu {
-    margin: 0 auto;
     max-width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
 .title {
@@ -26,6 +31,7 @@
 }
 
 .logoLink {
+    float: left;
 }
 
 .logo {
@@ -39,18 +45,22 @@
         padding-bottom: 0;
         text-align: center;
     }
+
     .logoLink {
         position: initial;
     }
+
     .logo {
         display: block;
         margin: 0 auto 20px auto;
         max-width: 100%;
         padding: 0 15px;
     }
+
     .title {
         margin: 10px 0 25px 0;
     }
+
     .menu {
         position: static;
     }

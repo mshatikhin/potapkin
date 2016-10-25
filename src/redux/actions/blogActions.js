@@ -1,7 +1,5 @@
 // @flow
 
-import "whatwg-fetch";
-
 export const UPDATE_BLOG = 'UPDATE_BLOG';
 
 export function updateBlog(blog: any) {

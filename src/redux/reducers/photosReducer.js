@@ -1,20 +1,20 @@
 // @flow
-
-import { UPDATE_PHOTOS } from '../actions/photosActions';
+import {UPDATE_PHOTOS} from "../actions/photosActions";
 
 type IState = {
-    photos: any[];
+    title: string;
+    photos: any[]
 }
 
 const initialState = {
+    title: "",
     photos: []
 };
 
 export default function (state: IState = initialState, action: any) {
     switch (action.type) {
         case UPDATE_PHOTOS:
-            state.photos = action.photos;
-            return Object.assign({}, state);
+            return Object.assign({}, state, action.photosInfo);
         default:
             return state;
     }

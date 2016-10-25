@@ -5,9 +5,11 @@
 }
 
 .link {
-    font-size: 14px;
-    color: #777;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #303030;
     margin-right: 20px;
+    padding-bottom: 5px;
     transition: .2s color ease-out;
 }
 
@@ -16,8 +18,10 @@
 }
 
 .activeLink {
-    color: #000;
-    box-shadow: 0 1px 0 red;
+    font-weight: normal;
+    color: #303030;
+    box-shadow: 0 2px 0 #909090;
+    padding-bottom: 5px;
 }
 
 @media screen and (max-width: 950px) {
@@ -30,6 +34,7 @@
     .wrap {
         text-align: center;
     }
+
     .link {
         display: block;
         width: 100%;
@@ -39,6 +44,7 @@
         font-weight: 300;
         margin-bottom: 1px;
     }
+
     .link:hover {
         color: #000;
     }

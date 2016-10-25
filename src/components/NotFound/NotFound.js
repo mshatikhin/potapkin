@@ -10,8 +10,8 @@ export default class NotFound extends Component {
         return (
             <div>
                 <h1 className={styles.notFoundHeader}>
-                    <p>Page not found 404</p>
-                    <a href="/">Redirect to portfolio page</a>
+                    <p>Ошибка 404</p>
+                    <a href="/">Перейти на главную</a>
                 </h1>
                 <div className={styles.notFound}>
                 </div>

@@ -64,7 +64,7 @@ var config = {
         chunkFileName: "assets/[id].[hash].js"
     },
     watchOptions: {
-        aggregateTimeout: 200
+        aggregateTimeout: 600
     },
     resolve: {
         extensions: ["", ".js"],

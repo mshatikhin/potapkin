@@ -1,19 +1,19 @@
 ﻿// @flow
-
 import React, {PropTypes, Component} from "react";
-import styles from "./Photos.css";
+import styles from "./StoriesPhotos.css";
 import {connect} from "react-redux";
-import {Link, withRouter} from "react-router";
+import {withRouter} from "react-router";
 import Loader from "../../components/Loader";
 import {photosRequest, updatePhotos} from "../../redux/actions/photosActions";
 import {FLICKR_USER_ID, FLICKR_API_KEY} from "../../utils/util";
 
 const propTypes = {
     dispatch: PropTypes.func.isRequired,
-    photos: PropTypes.any
+    photos: PropTypes.any,
+    title: PropTypes.string
 };
 
-class PhotosContainer extends Component {
+class HistoryPhotosContainer extends Component {
 
     constructor(props) {
         super(props);
@@ -30,6 +30,9 @@ class PhotosContainer extends Component {
     render() {
         return (
             this.props.photos.length == 0 ? <Loader /> : <div className={styles.main}>
+                <div className={styles.title}>
+                    {this.props.title}
+                </div>
                 <div>
                     {this.props.photos.map((photoUrl, index) => {
                         return <img key={index} className={styles.mainImage} src={photoUrl}/>
@@ -40,11 +43,11 @@ class PhotosContainer extends Component {
     }
 }
 
-PhotosContainer.propTypes = propTypes;
+HistoryPhotosContainer.propTypes = propTypes;
 
-const mapStateToProps = (props, {params}) => {
-    const {id} = params;
-    const {photos} = props.photosInfo;
-    return {photos, id};
+const mapStateToProps = (props, ownProps) => {
+    const {id} = ownProps.params;
+    const {photos, title} = props.photosInfo;
+    return {photos, title, id};
 };
-export default withRouter(connect(mapStateToProps)(PhotosContainer));
+export default withRouter(connect(mapStateToProps)(HistoryPhotosContainer));

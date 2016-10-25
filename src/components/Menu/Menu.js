@@ -10,10 +10,12 @@ export default class Menu extends Component {
     render() {
         return (
             <nav className={styles.wrap}>
-                <Link className={styles.link} activeClassName={styles.activeLink} to="/home">home</Link>
-                <Link className={styles.link} activeClassName={styles.activeLink} to="/photos">portfolio</Link>
-                <Link className={styles.link} activeClassName={styles.activeLink} to="/blog">blog</Link>
-                <Link className={styles.link} activeClassName={styles.activeLink} to="/about">contact</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/home">ГЛАВНАЯ</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/portfolio">ПОРТФОЛИО</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/stories">ИСТОРИИ</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/services">УСЛУГИ</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/blog">БЛОГ</Link>
+                <Link className={styles.link} activeClassName={styles.activeLink} to="/about">КОНТАКТЫ</Link>
             </nav>
         );
     }

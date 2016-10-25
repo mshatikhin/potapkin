@@ -1,6 +1,8 @@
 .root {
-    margin: auto;
+    display: block;
+    width: 960px;
     max-width: 100%;
+    margin: 150px auto 100px auto;
 }
 
 .wrapper {

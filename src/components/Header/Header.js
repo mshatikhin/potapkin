@@ -1,7 +1,7 @@
 // @flow
 
 import styles from "./Header.css";
-import image from "./images/MIKHAIL SHATIKHIN.png";
+import image from "./images/logo.png";
 
 import Menu from "../Menu/Menu";
 import {Link} from "react-router";
