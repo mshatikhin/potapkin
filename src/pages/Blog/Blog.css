@@ -96,7 +96,7 @@
 @media screen and (max-width: 1000px) {
 
     .main {
-        padding-top: 10px;
+        padding: 10px;
     }
 
     .cardImage {

@@ -32,3 +32,10 @@
     box-sizing: border-box;
     border-radius: 2px;
 }
+
+
+@media screen and (max-width: 950px) {
+    .main {
+        padding: 10px;
+    }
+}
