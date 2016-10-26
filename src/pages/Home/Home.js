@@ -1,5 +1,4 @@
 // @flow
-
 import styles from "./Home.css";
 import {Component} from "react";
 import Slider from "react-slick";
@@ -17,18 +16,21 @@ class Home extends Component {
         this.props.dispatch(photosRequest(FLICKR_USER_ID, FLICKR_API_KEY, slideShowId))
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         this.props.dispatch(resetPhotos());
     }
 
     render() {
+
         const settings = {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 3000,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
         };
 
         return (
