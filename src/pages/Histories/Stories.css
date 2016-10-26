@@ -1,20 +1,15 @@
 .main {
     display: block;
+    margin: auto;
     width: 960px;
     max-width: 100%;
-    margin: auto;
     padding-top: 120px;
 }
 
 .mainImage {
     display: block;
-    min-width: 310px;
-    min-height: 210px;
-}
-
-.imageWrapper {
-    overflow: hidden;
-    height: 210px;
+    max-width: none;
+    min-width: 470px;
 }
 
 .album {
@@ -29,31 +24,42 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    width: 310px;
-    height: 255px;
-    margin-right: 15px;
-    margin-bottom: 30px;
+    width: 470px;
+    height: 320px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     color: rgba(0, 0, 0, .870588);
     background-color: rgb(255, 255, 255);
+    transition: all 450ms cubic-bezier(.23, 1, .32, 1) 0ms;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, .117647) 0 1px 6px, rgba(0, 0, 0, .117647) 0 1px 4px;
+    border-radius: 2px;
 }
 
-.card:nth-child(3n) {
+.card:nth-child(2n) {
     margin-right: 0;
 }
 
 .meta {
-    font-family: Comfortaa, serif;
-    font-weight: lighter;
     text-align: center;
     box-sizing: border-box;
-    letter-spacing: .5px;
+    bottom: 0;
+    position: absolute;
     width: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
     transition: .2s all cubic-bezier(.215, .61, .355, 1);
-    padding: 10px 0;
-    height: 50px;
-    font-size: 12px;
-    color: #606060;
+    padding: 10px 0 10px 20px;
+    height: 48px;
+}
+
+.header {
+    font-weight: 500;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .delimeter {
@@ -67,18 +73,30 @@
 }
 
 .horizontalImage {
-    /*margin: 0 0 0 -25%;*/
+    margin: 0 0 0 -25%;
 }
 
 .verticalImage {
     margin: -15% 0 0 0;
 }
 
+@media screen and (max-width: 1500px) {
+    .main {
+        width: 960px;
+    }
+
+    .card:nth-child(3n) {
+        margin-right: 50px;
+    }
+
+    .card:nth-child(even) {
+        margin-right: 0;
+    }
+}
 
 @media screen and (max-width: 980px) {
     .main {
         text-align: center;
-        padding-top: 10px;
     }
 
     .card {

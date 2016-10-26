@@ -3,7 +3,7 @@
     width: 960px;
     max-width: 100%;
     margin: auto;
-    padding: 150px 10px 0 10px;
+    padding-top: 115px;
 }
 
 .contactList {
@@ -21,4 +21,28 @@
 
     font-size: 14px;
     color: #303030;
+}
+
+.avatar {
+    float: left;
+    margin-right: 35px;
+}
+
+.article:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media screen and (max-width: 950px) {
+    .about {
+        padding-top: 10px;
+    }
+
+    .avatar {
+        float: none;
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
 }

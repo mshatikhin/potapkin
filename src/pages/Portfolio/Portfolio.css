@@ -3,7 +3,7 @@
     width: 960px;
     max-width: 100%;
     margin: auto;
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .mainImage {
@@ -79,23 +79,10 @@
     margin: -15% 0 0 0;
 }
 
-@media screen and (max-width: 1500px) {
-    .main {
-        width: 960px;
-    }
-
-    .card:nth-child(3n) {
-        margin-right: 50px;
-    }
-
-    .card:nth-child(even) {
-        margin-right: 0;
-    }
-}
-
 @media screen and (max-width: 980px) {
     .main {
         text-align: center;
+        padding-top: 10px;
     }
 
     .card {

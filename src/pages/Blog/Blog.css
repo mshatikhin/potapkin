@@ -3,7 +3,7 @@
     width: 960px;
     max-width: 100%;
     margin: auto;
-    padding: 150px 10px 0 10px;
+    padding-top: 120px;
 }
 
 .main img, .main iframe {
@@ -47,6 +47,10 @@
     cursor: pointer;
 }
 
+.card:first-child {
+    padding-top: 0;
+}
+
 .card {
     padding: 25px 0;
     box-sizing: border-box;
@@ -58,7 +62,7 @@
     float: left;
     margin-right: 30px;
     overflow: hidden;
-    width: 300px;
+    width: 360px;
     max-width: 100%;
 }
 
@@ -69,7 +73,7 @@
 }
 
 .postWrap {
-    margin-left: 330px;
+    margin-left: 390px;
 }
 
 .img {
@@ -90,6 +94,11 @@
 }
 
 @media screen and (max-width: 1000px) {
+
+    .main {
+        padding-top: 10px;
+    }
+
     .cardImage {
         float: none;
         display: block;

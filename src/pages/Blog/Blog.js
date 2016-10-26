@@ -47,9 +47,9 @@ class BlogContainer extends Component {
                     <div className={styles.card}>
                         <a href={`/blog/${p.ID}`} className={styles.link}>
                             {p.attachment_count > 0 && <div className={styles.cardImage}>
-                                <img src={randomProperty(p.attachments).thumbnails.medium}
+                                <img src={randomProperty(p.attachments).thumbnails.large}
                                      className={styles.img}
-                                     width={300}
+                                     width={360}
                                 />
                             </div>}
                             <header className={styles.postHeader}>{p.title}</header>
