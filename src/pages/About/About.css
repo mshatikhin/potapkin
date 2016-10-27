@@ -34,7 +34,7 @@
     display: block;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
     .about {
         padding: 10px;
     }
