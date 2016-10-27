@@ -38,6 +38,10 @@
     box-sizing: border-box;
 }
 
+.card:hover .meta {
+    color: #000;
+}
+
 .card:nth-child(3n) {
     margin-right: 0;
 }
