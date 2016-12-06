@@ -18,7 +18,7 @@ export default function routes(storeRef) {
 
     return (
         <Route path="/" component={ Layout }>
-            <IndexRoute component={ Home }/>
+            <IndexRedirect to="home"/>
             <Route path="home" component={ Home }/>
             <Route path="portfolio" component={ Portfolio }/>
             <Route path="portfolio/:id" component={ Photos }/>
