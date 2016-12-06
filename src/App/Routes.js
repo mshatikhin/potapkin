@@ -1,4 +1,4 @@
-﻿import {Route, IndexRoute} from "react-router";
+﻿import {Route, IndexRedirect} from "react-router";
 import Layout from "../components/Layout/Layout";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import Photos from "../pages/Photos/Photos";
