@@ -48,6 +48,9 @@ export default class About extends Component {
                             <br/>Меня зовут Александр Потапкин, и я фотограф.
                             <br/>Вдохновенный фотограф.
                         </p>
+                        <div>
+                            <iframe src="https://player.vimeo.com/video/189451351?color=ffffff&title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
                         <p>
                             <h3>Предоставляю услуги профессионального фотографа в жанрах:</h3>
                             - Фотосъемка свадеб и Love story

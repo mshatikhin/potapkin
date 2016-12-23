@@ -34,6 +34,10 @@
     display: block;
 }
 
+iframe {
+    max-width: 100% !important;
+}
+
 @media screen and (max-width: 980px) {
     .about {
         padding: 10px;

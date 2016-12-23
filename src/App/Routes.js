@@ -1,4 +1,4 @@
-﻿import {Route, IndexRoute} from "react-router";
+﻿import {Route, IndexRedirect} from "react-router";
 import Layout from "../components/Layout/Layout";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import Photos from "../pages/Photos/Photos";
@@ -18,7 +18,7 @@ export default function routes(storeRef) {
 
     return (
         <Route path="/" component={ Layout }>
-            <IndexRoute component={ Home }/>
+            <IndexRedirect to="home"/>
             <Route path="home" component={ Home }/>
             <Route path="portfolio" component={ Portfolio }/>
             <Route path="portfolio/:id" component={ Photos }/>
