@@ -13,6 +13,11 @@ const randomProperty = (obj) => {
     return obj[keys[keys.length * Math.random() << 0]];
 };
 
+const firstProperty = (obj) => {
+    const keys = Object.keys(obj);
+    return obj[keys[0]];
+};
+
 const propTypes = {
     dispatch: PropTypes.func.isRequired,
     posts: PropTypes.any
@@ -47,7 +52,7 @@ class BlogContainer extends Component {
                     <div className={styles.card}>
                         <a href={`/blog/${p.ID}`} className={styles.link}>
                             {p.attachment_count > 0 && <div className={styles.cardImage}>
-                                <img src={randomProperty(p.attachments).thumbnails.large}
+                                <img src={firstProperty(p.attachments).thumbnails.large}
                                      className={styles.img}
                                      width={360}
                                 />

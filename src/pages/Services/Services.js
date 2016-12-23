@@ -1,10 +1,24 @@
-import React, {Component} from "react";
+// @flow
+import React, {Component, PropTypes} from "react";
 import styles from "./Services.css";
+import {connect} from "react-redux";
+import {postRequest} from "../../redux/actions/postActions";
+import Loader from "../../components/Loader";
+import {WP_SITE} from "../../utils/util";
 
-class Services extends Component {
+const propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    reviews: PropTypes.any
+};
+
+class ServicesContainer extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.props.dispatch(postRequest(WP_SITE, 116));
     }
 
     render() {
@@ -62,9 +76,9 @@ class Services extends Component {
                     <thead>
                     <tr>
                         <th>Бонус</th>
-                        <th> </th>
-                        <th> </th>
-                        <th> </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -106,9 +120,21 @@ class Services extends Component {
                     </tr>
                     </tbody>
                 </table>
+                {this.props.post == null
+                    ? <Loader />
+                    : <div className={styles.reviews}>
+                        <h1>{this.props.post.title}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: this.props.post.content } }></div>
+                    </div>}
             </div>
         );
     }
 }
 
-export default Services;
+ServicesContainer.propTypes = propTypes;
+
+const mapStateToProps = (props) => {
+    const {post} = props;
+    return {post};
+};
+export default connect(mapStateToProps)(ServicesContainer);

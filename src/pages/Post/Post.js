@@ -24,17 +24,13 @@ class PostContainer extends Component {
         this.props.dispatch(postRequest(WP_SITE, this.props.id));
     }
 
-    createMarkup(content) {
-        return { __html: content };
-    };
-
     render() {
         const post = this.props.post;
         return (
             post.content == null ? <Loader /> : <div className={styles.main}>
                 <div className={styles.card}>
                     <h1>{post && post.title}</h1>
-                    <div dangerouslySetInnerHTML={this.createMarkup(post && post.content) }></div>
+                    <div dangerouslySetInnerHTML={{ __html: post && post.content } }></div>
                 </div>
             </div>
         );

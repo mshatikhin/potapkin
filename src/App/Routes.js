@@ -9,7 +9,7 @@ import Stories from "../pages/Stories";
 import StoryPhotos from "../pages/StoryPhotos";
 import NotFound from "../components/NotFound/NotFound";
 import About from "../pages/About/About";
-import Services from "../components/Services";
+import Services from "../pages/Services/Services";
 
 let store;
 

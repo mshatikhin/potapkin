@@ -34,7 +34,10 @@ var plugins = [
         template: "src/static/DevIndexTemplate.html",
         inject: "body"
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+        "React": "react"
+    })
 ];
 
 var entry = ["./App/AppStart.js", "webpack/hot/only-dev-server", "webpack-dev-server/client?" + devUrl];
@@ -89,10 +92,6 @@ var config = {
     },
     postcss: function () {
         return [autoprefixer, precss];
-    },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
     plugins: plugins
 };

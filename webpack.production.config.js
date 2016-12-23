@@ -32,6 +32,9 @@ var plugins = [
         filename: "../index.html",
         template: "src/static/TemplateIndex.html",
         inject: "body"
+    }),
+    new webpack.ProvidePlugin({
+        "React": "react"
     })
 ];
 
@@ -78,10 +81,6 @@ var config = {
     },
     postcss: function () {
         return [autoprefixer, precss];
-    },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
     plugins: plugins
 };
