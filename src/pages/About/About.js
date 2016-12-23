@@ -26,7 +26,7 @@ export default class About extends Component {
                             <br/>Вдохновение застывшими в веках памятниками и мимолетной улыбкой совсем незнакомого человека… Вот что сопровождает меня каждый день, вот что позволяет создавать мои лучшие портреты и живые пейзажи, вот что позволяет схватывать эмоции и помещать истории длиною в годы в такой короткий миг кадра…
                             <br/>Вдохновение…
                         </p>
-                        <p>
+                        <div>
                             <h3>Свяжитесь со мной</h3>
                             <div>
                                 +7 912 605-72-37
@@ -40,7 +40,7 @@ export default class About extends Component {
                             <div>
                                 <a href="//facebook.com/sashapotapkin">facebook.com/sashapotapkin</a>
                             </div>
-                        </p>
+                        </div>
                     </article>
                     <div>
                         <p>
@@ -49,9 +49,9 @@ export default class About extends Component {
                             <br/>Вдохновенный фотограф.
                         </p>
                         <div>
-                            <iframe src="https://player.vimeo.com/video/189451351?color=ffffff&title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/189451351?color=ffffff&title=0&byline=0&portrait=0" width="960" height="540" frameBorder={"0"} allowFullScreen="allowFullScreen"></iframe>
                         </div>
-                        <p>
+                        <div>
                             <h3>Предоставляю услуги профессионального фотографа в жанрах:</h3>
                             - Фотосъемка свадеб и Love story
                             <br/>- Детская и семейная фотосъемка
@@ -74,7 +74,7 @@ export default class About extends Component {
                             <br/>
                             <br/>
                             Вопросы по изготовлению художественного портрета для вас или приобретению готовых портретов задавайте по телефону +7 912 60-57-237.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

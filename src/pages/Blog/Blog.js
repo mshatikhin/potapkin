@@ -58,7 +58,7 @@ class BlogContainer extends Component {
                                 />
                             </div>}
                             <header className={styles.postHeader}>{p.title}</header>
-                            <div className={styles.date}>{moment(p.date).lang("ru").format("LL")}</div>
+                            <div className={styles.date}>{moment(p.date).locale("ru").format("LL")}</div>
                             <div className={styles.postWrap}>
                                 <div dangerouslySetInnerHTML={this.createMarkup(p.excerpt)}></div>
                                 <div className={styles.links}>Читать далее</div>
