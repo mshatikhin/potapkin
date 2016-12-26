@@ -1,10 +1,9 @@
 ﻿// @flow
-
-import React, { Component, PropTypes } from "react";
+import React, {Component, PropTypes} from "react";
 import styles from "./Post.css";
-import { Link, withRouter } from "react-router";
-import { connect } from "react-redux";
-import { postRequest } from '../../redux/actions/postActions';
+import {withRouter} from "react-router";
+import {connect} from "react-redux";
+import {postRequest} from "../../redux/actions/postActions";
 import Loader from "../../components/Loader";
 import {WP_SITE} from "../../utils/util";
 
@@ -20,7 +19,7 @@ class PostContainer extends Component {
         super(props);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.dispatch(postRequest(WP_SITE, this.props.id));
     }
 
@@ -28,11 +27,11 @@ class PostContainer extends Component {
         const post = this.props.post;
         return (
             post.content == null ? <Loader /> : <div className={styles.main}>
-                <div className={styles.card}>
-                    <h1>{post && post.title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: post && post.content } }></div>
+                    <div className={styles.card}>
+                        <h1>{post && post.title}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: post && post.content } }></div>
+                    </div>
                 </div>
-            </div>
         );
     }
 }
@@ -40,8 +39,8 @@ class PostContainer extends Component {
 PostContainer.propTypes = propTypes;
 
 const mapStateToProps = (props, ownProps) => {
-    const { post } = props;
-    const { id } = ownProps.params;
-    return { post, id };
+    const {post} = props;
+    const {id} = ownProps.params;
+    return {post, id};
 };
 export default withRouter(connect(mapStateToProps)(PostContainer));
