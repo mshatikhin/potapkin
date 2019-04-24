@@ -17,7 +17,7 @@ export function photosRequest(userId: string, apiKey: string, photosetId: string
             .then((response) => {
                 if (response.stat === "ok") {
                     const photos = response.photoset.photo.map(function (photo) {
-                        return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg`
+                        return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`
                     });
                     const title = response.photoset.title;
                     const photosInfo = {
